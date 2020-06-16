@@ -98,7 +98,7 @@ Response :
 ```
 To Get all favorited ideas of a User :
 /api/favorites/:id -> GET Request
- here Params :id is the User's UID/_id from Usser collection. 
+ here Params :id is the User's UID/_id from User collection. 
  Here the _id in user is the MongoDB UID / _id unique for every user. This shoud 12 characters and uinque and accoridng to the rules of MongoDB _id.
  
  Response :
