@@ -113,6 +113,24 @@ app.put("/api/unfav", (req, res) => {
   });
 });
 
+app.get("/api/favorites", (req, res) => {
+  User.find({})
+    .populate(
+      "favorites",
+      "_id idea_owner idea_owner_name idea_genre idea_headline idea_description price"
+    )
+    .then((favorites) => {
+      if (favorites == []) {
+        return res.json({ favorites: "No Favourites" });
+      } else {
+        return res.json(favorites);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 app.listen(PORT, () =>
   console.log(`Server Started at : http://localhost:${PORT}`)
 );
