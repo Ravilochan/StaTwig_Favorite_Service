@@ -60,8 +60,10 @@ POST body data in the request should be like , for example:
 ```
 Fields in the POST Body should be "user" & "favorite" which has the deatils of the User who wants to favorite an idea ( eg: _id etc) and the deatils of the Idea a user want to favorite ( eg: _id, idea_headline , idea_description etc ) respectively
 
+
 Here the _id in user is the MongoDB UID / _id unique for every user. This shoud 12 characters and uinque and accoridng to the rules of MongoDB _id.
 Here the _id in Favorite is the MongoDB UID / _id unique for every Idea. This shoud 12 characters and uinque and accoridng to the rules of MongoDB _id.
+
 
 For making this POST Favorite Request ( Favourite an Idea ) :
 The user needs to send User detalis in "user" and Idea Details in "favorite"
