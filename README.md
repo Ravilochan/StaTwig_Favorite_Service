@@ -138,7 +138,7 @@ Response :
     }
 ]
 ```
- # Interanal APIs
+ # Internal APIs
  For /api/favorites - GET Request
  Use of this end point is to Get all the Relational Data of user and their favorites present in the service.
  
