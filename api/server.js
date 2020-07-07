@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const User = require("./models/User");
 const Idea = require("./models/Idea");
 const MONGOURI =
-  "mongodb+srv://mern:cq3iwBBedA4paAAe@cluster0-npseq.gcp.mongodb.net/favs?retryWrites=true&w=majority";
+  "mongodb+srv://Admin:K2EVDutkj9V2Lam8@collaboratofav-7rukn.mongodb.net/FavDb?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 9000;
 const cors = require("cors");
 const app = express();
@@ -111,6 +111,24 @@ app.put("/api/unfav", (req, res) => {
       res.json(result);
     }
   });
+});
+
+app.get("/api/favorites", (req, res) => {
+  User.find({})
+    .populate(
+      "favorites",
+      "_id idea_owner idea_owner_name idea_genre idea_headline idea_description price"
+    )
+    .then((favorites) => {
+      if (favorites == []) {
+        return res.json({ favorites: "No Favourites" });
+      } else {
+        return res.json(favorites);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 app.listen(PORT, () =>
