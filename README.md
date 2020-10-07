@@ -1,4 +1,4 @@
-# fav-service
+# Favorite-Service
 Service which favourites Users Ideas and store them in Database.
 This service is written in NodeJS with ExpressJS , MongoDB as database using Mongoose ORM.
 A User can Favorite an Idea , Unfavorite any idea.
