@@ -40,7 +40,7 @@ This Service has API endpoints at
 ```
 For /api/fav - POST Request
 POST body data in the request should be like , for example: 
-```JSON
+```js
 { 
 "user":
      {
