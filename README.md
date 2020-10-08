@@ -1,7 +1,7 @@
 # Favorite-Service
 Service which favourites Users Ideas and store them in Database.
 This service is written in NodeJS with ExpressJS , MongoDB as database using Mongoose ORM.
-A User can Favorite an Idea , Unfavorite any idea.
+A User can Favorite an Idea and Unfavorite any idea. All the data is stored in MongoDB Atlas. 
 
 # Installation
 Clone this repository into your local system 
